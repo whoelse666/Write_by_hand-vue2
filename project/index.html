@@ -1,0 +1,65 @@
+<!--
+ * @Author: RONGWEI PENG
+ * @Date: 2020-08-19 22:00:17
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2020-09-03 11:57:43
+ * @FilePath: /手写vue_demo/kvue/test01/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>手写vue01</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<p>{{name}}:
+			<span>{{age}}</span>
+			</p>
+			<p>{{age}}</p>
+		<p k-text="name"></p>
+		 	<div k-html="html"></div>
+			<input type="text" k-model="name">  
+		 <button @click="changeName">click</button>    
+		</div>
+		<script src="./compiler.js"></script>
+		<script src="./kvue.js"></script>
+		<script>
+			const app = new KVue({
+				el: "#app",
+				data: {
+					foo: '测试数据-字符串',
+					obj: {
+						bar: '测试数据-对象',
+					},
+					name: "I am test.",
+					age: 12,
+					html: '<button @click="changeName">确认</button>'
+				},
+				created() {
+					console.log('开始啦')
+					setTimeout(() => {
+						this.name = '我是mock'
+					}, 1500)
+				},
+				methods: {
+					changeName() {
+						console.log('console', this);
+						this.name = '哈喽...';
+						this.age = 100
+					}
+				}
+			})
+			// console.log('console', app.$data.foo);
+			// app.$data.foo = "hello, kaikeba!";
+			// app.$data.obj.bar = "oh my bar";
+			// app.foo;
+			// app.foo = "hello, kaikeba!";
+			// app.obj.bar = "oh my bar";
+		</script>
+	</body>
+
+</html>
