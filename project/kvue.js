@@ -1,10 +1,3 @@
-/*
- * @Author: RONGWEI PENG
- * @Date: 2020-08-19 22:00:01
- * @LastEditors: Do not edit
- * @LastEditTime: 2020-08-28 14:28:06
- * @FilePath: /手写vue_demo/kvue/test01/kvue.js
- */
 class KVue {
 	constructor(options) {
 		this.$options = options;
@@ -17,7 +10,6 @@ class KVue {
 		// this.test ;  
 		// new Watcher(this, 'foo.bar');
 		// this.foo.bar; 
-		
         /* compiler.js */
 		  new Compile(options.el, this);
 		if (options.created) {

@@ -1,11 +1,3 @@
-/*
- * @Author: RONGWEI PENG
- * @Date: 2020-08-19 22:00:04
- * @LastEditors: Do not edit
- * @LastEditTime: 2020-08-28 17:11:02
- * @FilePath: /手写vue_demo/kvue/test01/compiler.js
- */
-
 /* 
 1. 获取并遍历DOM树
 2. 文本节点：获取{{}}格式的内容并解析
