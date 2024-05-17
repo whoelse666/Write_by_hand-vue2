@@ -117,11 +117,6 @@ class Compile {
     }
 
     /**
-     * @Author: RONGWEI PENG
-     * @Date: 2020-08-28 10:05:59
-     * @LastEditTime: Do not edit
-     * @LastEditors: Do not edit
-     * @Description: Do not edit
      * @@param: {
      * node: 更新的节点
      * exp: 更新的 key 值
